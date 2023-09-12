@@ -1,0 +1,9 @@
+print('Menghitung luas permukaan dan keliling segitiga')
+t = float(input('Panjang sisi X : '))
+a = float(input('Panjang sisi Y : '))
+m = (a**2+t**2)**(0.5)
+
+luas = 0.5*a*t
+keliling = a+t+m
+print(f"Luas Permukaan {luas:.2f}")
+print(f"Keliling {keliling:.2f}")
