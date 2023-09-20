@@ -1,0 +1,23 @@
+s = input("Masukkan Input Pertama : ")
+d = input("Masukkan Input Kedua : ")
+t = input("Masukkan Input Ketiga : ")
+
+match (s, d, t):
+    case ("vertebrado", "ave", "carnivoro"):
+        print("aguia")
+    case ("vertebrado", "ave", "onivoro"):
+        print("pomba")
+    case ("vertebrado", "mamivero", "onivoro"):
+        print("homem")
+    case ("vertebrado", "mamivero", "herbivoro"):
+        print("vaca")
+    case ("invertebrado", "inseto", "hematofago"):
+        print("pulga")
+    case ("invertebrado", "inseto", "herbivoro"):
+        print("lagarta")
+    case ("invertebrado", "anelideo", "hematofago"):
+        print("sanguesssuga")
+    case ("invertebrado", "anelideo", "onivoro"):
+        print("minhoca")
+    case _:
+        print("input tidak valid")
