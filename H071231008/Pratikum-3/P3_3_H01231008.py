@@ -1,11 +1,3 @@
-def conversijam(derajatD):
-    derajatD *= 240
-    jam = int(derajatD // 3600)+6
-    if jam >= 24:
-        jam %= 24
-    menit = int(derajatD % 3600 // 60)
-    derajatD = int(derajatD % 3600 % 60)
-    return  (f"{jam:02}:{menit:02}:{derajatD:02}")
 while True:
     try:
         derajat = float(input("Masukan Posisi Matahari (Derajat) : "))
@@ -23,7 +15,14 @@ elif derajat > 180 and derajat <= 270:
     Waktu = "Sore"
 else:Waktu = "Malam"
 
-print (f"Selamat {Waktu}\n{conversijam (derajat)}")
+derajat *= 240
+jam = int(derajat // 3600)+6
+if jam >= 24:
+    jam %= 24
+menit = int(derajat % 3600 // 60)
+derajat = int(derajat % 3600 % 60)
+digicloak = (f"{jam:02}:{menit:02}:{derajat:02}")
+print (f"Selamat {Waktu}\n{digicloak}")
 
 
 
