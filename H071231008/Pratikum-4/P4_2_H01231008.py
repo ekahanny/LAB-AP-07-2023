@@ -1,5 +1,5 @@
 def palindorme(string: str) -> str:
-    kataAwal = ("".join(map(str,[huruf for huruf in string if huruf.isalnum()])))
+    kataAwal = ("".join([huruf for huruf in string if huruf.isalnum()]))
 
     if kataAwal.lower() == (kataAwal[::-1]).lower():
         print ("PALINDROME\n")

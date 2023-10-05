@@ -1,7 +1,7 @@
 def permutasikata(kata):
     if type(kata) == str:
         if kata.isnumeric():
-            print("bad input bro")
+            print("Input Tidak Boleh Berbentuk Angka")
             exit()
     try :
         panjang = len(kata)
