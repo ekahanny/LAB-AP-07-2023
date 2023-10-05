@@ -1,0 +1,10 @@
+def stringPermutation(kata):
+    try:
+            for x in range(len(kata)):
+                kata = kata[-1] + kata[:-1]
+                print(kata, end=" | ")
+    except TypeError:
+        print("\nTolong Masukkan String")
+        
+stringPermutation("Ayam")
+stringPermutation("123")

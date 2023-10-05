@@ -1,0 +1,36 @@
+print("Pilih Gender Anda")
+print("1. Pria")
+print("2. Wanita")
+gender = int(input("= "))
+
+if gender == 1:
+    tb = float(input(" Masukkan tinggi badan (cm) : "))/100
+    bb = float(input(" Masukkan berat badan (kg) : "))
+
+    bmi = bb / (tb**2)
+    if bmi >27: 
+        golongan = "Obese"
+    elif 23.9 <= bmi < 26.9:
+        golongan = "Overweight"
+    elif 18 <= bmi < 23.9:
+        golongan = "Normal"
+    else:
+        golongan = "Underweight"
+    print(f"Anda tergolong {golongan} dengan BMI {bmi:.2f}")
+        
+elif gender == 2:
+    tb = float(input(" Masukkan tinggi badan (cm) : "))/100
+    bb = float(input(" Masukkan berat badan (kg) : "))
+
+    bmi = bb / (tb**2)
+    if bmi > 28:
+        golongan = "Obese"
+    elif 23.9 <= bmi < 27.9:
+        golongan = "Overweight"
+    elif 17 <= bmi < 23.9:
+        golongan = "Normal"
+    else:
+        golongan = "Underweight"
+    print(f"Anda tergolong {golongan} dengan BMI {bmi:.2f}")
+else:
+    print('Input Invalid, pilih nomor 1 atau 2')

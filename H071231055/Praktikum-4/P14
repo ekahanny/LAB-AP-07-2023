@@ -1,0 +1,14 @@
+def maksimum(*daftar):
+    if not daftar:
+        raise ValueError("Masukkan Angka dalam Daftar")
+
+    maksimum = daftar[0]
+    
+    for angka in daftar:
+        if angka > maksimum:
+            maksimum = angka
+    print(">>", maksimum)
+
+maksimum(23, 43, 56, 87, 98, 100)
+
+    
