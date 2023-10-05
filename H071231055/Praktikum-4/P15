@@ -1,0 +1,12 @@
+def catAndMouse(catA, catB, mosC):
+    a = abs(catA - mosC)
+    b = abs(catB - mosC)
+    
+    if a < b:
+        print("Cat A") 
+    elif b < a:
+        print("Cat B")
+    else:
+        print("Mouse C")
+        
+catAndMouse(catA = 20, catB = 10, mosC = 15)
