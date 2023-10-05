@@ -4,4 +4,4 @@ def maxnumber(*args):
         if i > angkaterbesar:
             angkaterbesar = i
     return angkaterbesar
-print(maxnumber(100,200,300,250))
+print(maxnumber(-200,-100,-400,-50))
