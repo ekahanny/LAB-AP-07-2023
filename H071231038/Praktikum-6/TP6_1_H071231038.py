@@ -42,6 +42,9 @@ while opsi_input:
         print(garis)
         print(f"Sampai jumpa {dictt['Nama']}!")
         break
+    else:
+        print("input salah\n")
+        
 
     print(garis)
     print(sd)
