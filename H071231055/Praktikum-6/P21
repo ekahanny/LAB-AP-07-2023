@@ -1,0 +1,15 @@
+ganjil, genap, bagi5 = [], [], []
+
+masuk = input("Masukkan beberapa angka: ").split()
+for x in masuk:
+    ubah = int(x)
+    if ubah % 2 != 0:
+        ganjil.append(ubah)
+    elif ubah % 2 == 0:
+        genap.append(ubah)
+    if ubah % 5 == 0: 
+        bagi5.append(ubah)
+
+print("Angka Genap:", genap)
+print("Angka Ganjil:", ganjil)
+print("Angka yang habis dibagi 5:", bagi5)
