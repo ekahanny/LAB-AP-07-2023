@@ -10,8 +10,10 @@ transaksi = []
 def hasil_id():
     now = datetime.datetime.now()
     id_transaksi = now.strftime("%y%m%d%H%M") + str(random.randint(100, 999))
-    inisial = kasir[0] + kasir[len(kasir) // 2] + kasir[-1]
-    return inisial.upper() + id_transaksi
+    inisial = ""
+    for kata in kasir.split():
+        inisial += kata[0]
+        return inisial.upper() + id_transaksi
 
 def print_invoice(id_transaksi, kasir, produk):
     file_invoices = f"invoices/{id_transaksi}.txt"
