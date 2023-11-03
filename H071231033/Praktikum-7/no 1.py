@@ -10,7 +10,7 @@ def awal_trx_history():
         
 def isi_trx_history():
     '''MEMBUAT ISI ATAU BAGIAN DARI HISTORI TRANSAKSI'''
-    global total_keseluruhan #Global : Berguna untuk dapat mengambil variabel yang dari luar, dan dipanggil kedalam tanpa menjadikannya parameter
+    global total_keseluruhan 
     waktu_struk = datetime.datetime.now()
     total_keseluruhan = "Rp" + str(total_keseluruhan)
     with open(trx_history, mode="a") as isi:
@@ -54,7 +54,7 @@ folder_invoice   = "Invoice"
 
 print(f'{"="*70}\n{"SELAMAT DATANG".center(70)}\n{"="*70}')
 kasir       = input("Masukkan nama kasir : ").title()
-## Inisial Nama 
+
 inisial = ""
 x       = kasir.split()
 for i in x:
@@ -99,12 +99,13 @@ while True:
             print(f"{'='*70}")
             cari = input("Masukkan ID transaksi  : ")
             pathfolder = folder_invoice + "/" + cari + ".txt"
-            with open(pathfolder, mode="r") as cari:
-                print(cari.read())
+            if os.path.exists(pathfolder):
+                with open(pathfolder, 'r') as struk:
+                    print(struk.read())  
+            else:
+                print("="*70)
+                print("Data tidak ada")
 
         case 3:
             print(f"{'='*70}\n{'SAMPAI JUMPA'.center(70)}\n{'='*70}")
             break
-
-
-
