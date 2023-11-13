@@ -108,5 +108,5 @@ support.special(warrior)
 print("Warrior (health):", warrior.getHealth())
 print("Support (speed):", support.getSpeed())
 
-# assassin.movement("R")
-# print("Posisi Assassin sekarang adalah:", assassin.getPosisi())
+assassin.movement("R")
+print("Posisi Assassin sekarang adalah:", assassin.getPosisi())
