@@ -3,18 +3,18 @@ import os
 
 class Detail:
     def __init__(self):
-        self.nama = None
-        self.email = None
-        self.password = None
+        self.nama = None #atribut
+        self.email = None #atribut
+        self.password = None #atribut
         
-    def BuatNama(self, nama):
-        self.nama = nama
-    def BuatEmail(self, email):
-        self.email = email
-    def BuatPassword(self, password):
-        self.password = password
+    def BuatNama(self, nama): #method
+        self.nama = nama #atribut yang mau di ubah jadi parameter
+    def BuatEmail(self, email): #method
+        self.email = email #inijuga
+    def BuatPassword(self, password): #method
+        self.password = password #ini juga
         
-def SelamatDatang():
+def SelamatDatang(): #pnggil fungsi
     print(f"{'='*50}")
     print(f"Silahkan pilih opsi menu anda")
     print(f"1. Detail Anda\n2. Ubah Nama \n3. Jumlah Data Pada File\n4. Save Data Pada File\n5. Buat Data Baru\n6. Keluar")
@@ -30,7 +30,7 @@ def Nama():
         
 def Email():
     email = input("Silahkan Masukkan Email Anda : ")
-    pattern_email = re.fullmatch(r"[A-Za-z]*([0-9]{2,})?@[a-z]*\.([a-z]*\.)?(com|co\.id|ac\.id)$", email)
+    pattern_email = re.fullmatch(r"(?=.*[0-9])[a-z]*([0-9]{1,})?@student.unhas.ac.id$", email)
     if pattern_email:
         return email
     else:
@@ -49,7 +49,7 @@ def Password():
         print(f"{'='*50}\nPassword yang anda masukkan terlalu lemah!\nGunakan minimal 1 huruf kapital, huruf kecil, dan angka\n{'='*50}")
         Password()
 
-detail_akun = Detail()    
+detail_akun = Detail() #panggil kelas untuk membuat objek
 while True:
     SelamatDatang()
     pilihan = int(input("Silahkan Pilih Opsi Anda : "))
@@ -76,9 +76,7 @@ while True:
                     pattern_jumlah = re.findall(r"Nama          : ", cari_data.read())
                     print(f"{'='*50}")
                     print("File Ditemukan")
-                    print(f"Jumlah data pada file berjumlah {len(pattern_jumlah)}")
-                     
-                
+                    print(f"Jumlah data pada file berjumlah {len(pattern_jumlah)}")    
         case 4:
             if detail_akun.nama is None and detail_akun.email is None and detail_akun.password is None:
                 print(f"{'='*50}\nData Saat Ini Kosong, Tidak Dapat Save!")
