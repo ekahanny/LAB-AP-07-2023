@@ -60,7 +60,7 @@ def buat_data_baru():
 
     while True:
         datauser.email = input("Masukkan email: ")
-        if not re.match("[a-z0-9._%+-]+@student\.unhas\.ac\.id$",datauser.email):
+        if not re.match("^(?=.*[0-9])[a-z0-9]+@student\.unhas\.ac\.id$",datauser.email):
             print("email salah")
         else:
             break
@@ -70,7 +70,7 @@ def buat_data_baru():
         polapassword = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$"
         re_pass = re.search(polapassword,datauser.password)
 
-        if not len(datauser.password) >= 8 and len(datauser.password) < 20:
+        if not len(datauser.password) >= 8 or len(datauser.password) > 20:
             print("Password harus memiliki panjang 8-20 karakter")
         elif not re_pass:
             print("Password yang anda masukkan terlalu lemah, gunakan minimal 1 huruf kapital, huruf kecil, dan angka")
@@ -102,3 +102,5 @@ while True:
     elif pilihan == 6:
         print("sampai jumpa")
         break
+    else:
+        print("Opsi salah")
